@@ -1,0 +1,907 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* font-family: 'Open Sans', sans-serif; */
+
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./assets/peaks.svg");
+  height: 100vh;
+  background-size: cover;
+}
+
+/* Auth Page */
+
+.auth {
+  background-image: url("./assets/peaks.svg");
+  height: 100vh;
+  background-size: cover;
+}
+
+.auth-logo {
+  display: flex;
+  height: 200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.auth-layout, .account-layout {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.auth-container {
+  box-sizing: border-box;
+  width: 320px;
+  background-color: #2a3a16;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.auth-title {
+	padding: 1rem;
+  color: #f4fab1d7;
+}
+
+.member-btn {
+  color: #f4fab1d7;
+  padding-bottom: 1rem;
+  width: 180px;
+  margin: 0 auto;
+}
+
+.username, .password, .email {
+	margin: .5rem;
+	padding: .65rem 0 .65rem 1rem;
+	width: 225px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(234, 234, 234);
+
+}
+
+.password-btn-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  z-index: 2;
+  top: 30%;
+  right: 40px;
+  background: none;
+  border: none;
+
+
+}
+
+.err-msg {
+  padding: 1rem 0;
+}
+
+/* About */
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.about-text-container {
+  position: fixed;
+  z-index: 2;
+  background-color:#f4fab1;
+  height: 60%;
+  width: 80%;
+  top: 16%;
+  left: 12.5%;
+  border-radius: 10px;
+  box-shadow: #839358 0 0 3px;
+}
+
+.about-esc-btn {
+  position: absolute;
+  font-size: 13px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 1.5px;
+  top: .5rem;
+  right: .75rem;
+  padding: .5rem .8rem;
+  align-items: center;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color:#2a3a16;
+  cursor: pointer;
+  border-radius: 80px;
+  border: none;
+}
+
+.about-box {
+  border-radius: 10px;
+  padding: 1rem 5rem 3rem 2rem;
+  overflow: auto;
+  height: 100%;
+}
+
+.about-box > ol {
+  padding-left: 1rem;
+}
+
+.about-box > ol > li {
+  padding-bottom: .5rem;
+}
+
+.about-box > ol > li > p {
+  font-weight: 700;
+}
+
+.about-box > h2 {
+  padding-top: 1rem;
+}
+
+.about-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.about-box::-webkit-scrollbar-track {
+  background:#839358a2;
+  border-radius: 0 80px 80px 0;
+}
+
+.about-box::-webkit-scrollbar-thumb {
+  background: #2a3a1696;
+  border-radius: 0 80px 80px 0;
+}
+
+/* Account */
+
+.account-page-container {
+  padding-top: 3rem;
+  box-sizing: border-box;
+  width: 500px;
+  background-color: #2a3a16;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #f4fab1a7;
+}
+
+.account-title {
+  font-size: 1.5rem;
+  padding-bottom: .5rem;
+  color: #f4fab1f0;
+}
+
+/* Navigation */
+
+.nav-container {
+	position: fixed;
+  position: relative;
+  background-color: #f9fccd;
+  box-shadow: #839358a2 0 0 5px;
+	top: 0;
+	left: 0;
+	right: 0;
+  height: 110px;
+	padding: .5rem .7rem;
+  z-index: 2;
+}
+
+.logo {
+  display: flex;
+  margin: 0 auto;
+  height: 95px;
+}
+
+.logo-link {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  margin: auto;
+}
+
+
+
+.nav-links {
+	display: block;
+  text-decoration: none;
+	font-size: 1rem;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #2a3a16;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar.open {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  padding: 1rem 1.5rem;
+  display: block;
+  background-color: #8a9d5c;
+  border-radius: 10px;
+}
+
+.navbar.open a {
+  color: #edf4b2;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 1px;
+}
+
+.navbar.open a:hover {
+  color: #f2ed65;
+}
+
+.logout-btn, .account-link {
+  background: none;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top : .5rem;
+  padding-top: .5rem;
+  border-top: 1px solid #dce3a5;
+
+}
+
+.app {
+  position: relative;
+}
+
+a.footer-link {
+  color: #edf4b2;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+}
+
+a.footer-link:hover {
+  color: #f2ed65;
+}
+
+
+/* Pages */
+
+.logs-page, .trail-page, .trail-logs-page, .post-page, .solo-page, .account-page {
+  background-image: url("./assets/peaks.svg");
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Home */
+
+img.logs-title {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  width: 150px;
+}
+
+.dropdown {
+  display: block;
+  margin: 0 auto 2rem;
+	padding: .65rem 0 .65rem 1rem;
+	width: 225px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9fccd;
+  box-shadow: #839358a2 0 0 2px;
+}
+
+/* Post Form */
+
+.log-form {
+  width: 100%;
+}
+
+.post-form-container {
+	display: flex;
+	justify-content: center;
+  width: 100%;
+	
+}
+
+.post-container {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: #dce3a5;
+  border-radius: 10px;
+  box-shadow: #839358a2 0 0 3px;
+}
+
+.post-title {
+	display: flex;
+	justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.log-input{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  background-color: #f9fccd;
+  margin: .65rem 0;
+  padding: .7rem .5rem;
+}
+
+.log-title-block {
+  display: block;
+  padding-bottom: .5rem;
+  width: 100%;
+}
+
+.log-title {
+  padding: 1rem 0;
+}
+
+.log-form input {
+  text-align: right;
+}
+
+.log-input label.radio-label {
+  margin-right: 0.5rem;
+}
+
+.log-input input[type="radio"] {
+  margin-right: 0.2rem;
+}
+
+textarea.notes-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: .5rem
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+
+.post-btn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color:#2a3a16;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 1.5px;
+  line-height: 14px;
+  margin: 0;
+  position: relative;
+  overflow: visible;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 0;
+}
+
+
+.post-btn:before,
+.post-btn:after, 
+.about-esc-btn:before,
+.about-esc-btn:after{
+  border-radius: 80px;
+}
+
+.post-btn:before, .about-esc-btn:before {
+  background-color: rgba(84, 100, 60, 0.32);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.post-btn:after, .about-esc-btn:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ced34e80 0, #6b854587 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.add-log-btn:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #d0d37b 0, #a07962 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.trail-validation-err, .date-validation-err {
+  display: flex;
+  justify-content: end;
+  padding: .5em 0;
+  color: #a55902;
+}
+
+.auth-btn:after {
+  background-image: linear-gradient(92.83deg, #dee60b80 0, #bfea7f87 100%);
+}
+
+.post-btn:hover:not(:disabled):after, .about-esc-btn:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.post-btn:active:not(:disabled), .about-esc-btn:active:not(:disabled) {
+  color: #fff79b;
+}
+
+.post-btn:active:not(:disabled):after, .about-esc-btn:active:not(:disabled):after {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #b59842 0, #6f4d12 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.post-btn:disabled, .about-esc-btn:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+.about-btn {
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+
+
+
+/* Trail Form */
+
+.trail-form {
+  margin: 0 20%;
+}
+
+.trail-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 2rem;
+  padding: 0 .5rem;
+  border-radius: 10px;
+}
+
+input.trail-name {
+	padding: .65rem 0 .65rem 1rem;
+	width: 225px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9fccd;
+  box-shadow: #839358a2 0 0 2px;
+}
+
+.trail-btn {
+  background: none;
+  border: none;
+  padding-left: 1rem;
+  font-size: 2rem;
+
+}
+
+/* Log and Trail lists */
+
+.notice-img {
+  background-color: #f9fccd;
+  border-radius: 20px;
+  box-shadow: #839358a2 0 0 3px;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 200px;
+}
+
+.add-log-btn {
+  display: block;
+  margin: 1rem auto;
+  text-decoration: none;
+  color:#000000;
+}
+
+.log-container > a {
+  text-decoration: none;
+}
+
+.log-list {
+  /* margin: 0 20%; */
+  margin: 0 auto;
+  max-width: 700px;
+  background-color: #dce3a5;
+  border-radius: 10px;
+  box-shadow: #839358a2 0 0 3px;
+}
+
+.log-location, .trail-name, .select-trail, .log-trail {
+  text-transform: capitalize;
+}
+
+
+
+.log-list a, .trail-list a {
+  text-decoration: none;
+  color:#2a3a16;
+}
+
+.log-container, .trail-container {
+  padding: 1rem;
+  position: relative;
+  border-bottom: #2a3a1648 1px solid;
+  transition: background-color .2s ease-in-out;
+}
+
+.log-container:hover, .trail-container:hover {
+  background-color: #edf4b2;
+  transition: background-color .2s ease-in-out;
+}
+
+.log-container.first-item, .trail-container.first-item {
+  border-radius: 10px 10px 0 0;
+}
+
+.log-container.last-item, .trail-container.last-item {
+  border-bottom: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.log-container.first-item.last-item, .trail-container.first-item.last-item {
+  border-radius: 10px;
+}
+
+.log-container span, .trail-container span{
+  
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.trail-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trail-container > a {
+  display: flex;
+  width: 90%;
+}
+
+.trail-delete {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:#839358;
+}
+
+.trail-delete:hover {
+  color: #a55902;
+}
+
+/* Trail logs Page */
+
+.trail-logs-title {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  padding: 0 0 2rem;
+}
+
+
+/* Solo log Page */
+
+.back-button {
+  position: absolute;
+  padding: .2rem .7rem;
+  background-color: #f9fccd;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  box-shadow: #839358 0 0 2px;
+  border: .5px rgba(140, 151, 96, 0.494) solid;
+}
+
+.solo-page {
+  position: relative;
+}
+
+.solo-log {
+  position: relative;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 700px;
+  background-color: #dce3a5;
+  border-radius: 10px;
+  box-shadow: #839358a2 0 0 3px;
+}
+
+.solo-title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.log-trail-solo {
+  text-transform: capitalize;
+}
+
+.solo-span {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.log-span {
+  width: 22%;
+  display: flex;
+  justify-content: center;
+}
+
+.log-location {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.log-description {
+  width: 100%;
+  background-color: #f9fccd;
+  margin: .65rem 0;
+  padding: .7rem .5rem;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: .5rem;
+  width: 100%;
+}
+
+
+.log-delete, .log-edit {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color:#2a3a16;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 1.5px;
+  line-height: 14px;
+  margin: 0;
+  position: relative;
+  overflow: visible;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 0;
+}
+
+
+.log-delete:before,
+.log-delete:after, .log-edit:before, .log-edit:after {
+  border-radius: 80px;
+}
+
+.log-delete:before, .log-edit:before {
+  background-color: rgba(84, 100, 60, 0.32);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.log-delete:after, .log-edit:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ced34e80 0, #6b854587 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.log-delete:hover:not(:disabled):after, .log-edit:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.log-delete:active:not(:disabled), .log-edit:active:not(:disabled) {
+  transition: 3s ease-out;
+  color: #000000;
+}
+
+.log-delete:active:not(:disabled):after, .log-edit:active:not(:disabled):after {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #c3a940 0, #f9de13 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.log-delete:disabled, .log-edit:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+@media screen and (max-width: 900px) {
+  .notice-img {height: 170px}
+
+  .about-text-container {top: 18%;}
+}
+
+@media screen and (max-width:600px){
+  .notice-img {height: 150px}
+  .post-title {font-size: 1.8rem;}
+  .nav-toggle {font-size: 1.8rem; left: .7rem;}
+  .navbar.open {left: .7rem; padding: .5rem .8rem;}
+  .nav-links {font-size: .8rem;}
+  .solo-title, .trail-logs-title {font-size: 1.3rem;}
+  .home-page {padding: 2rem .7rem;}
+  .trail-logs-page, .trail-page, .solo-page, .logs-page {padding: 1rem .7rem}
+  p.bullet, .log-day, .log-mileage, .log-trail, .log-direction, .back-button, .log-day-solo, .log-mileage-solo, .log-trail-solo, .log-direction-solo, .log-description, a.footer-link {font-size: .9rem;}
+  .back-button {padding: .3rem .5rem}
+  .log-start-end {font-size: .9rem;}
+  .log-edit, .log-delete {font-size: .7rem; padding: 8px 13px}
+
+  .auth-container {width: 80%;}
+  .auth-logo {height: 145px;}
+  .auth-title {font-size: 1.2rem;}
+  .member-btn {font-size: .8rem; width: 150px;}
+  .err-msg {font-size: .8rem; padding: .5rem 0;}
+  .post-btn {font-size: .8rem; padding: 8px 13px;}
+  input.email, input.username, input.password {font-size: .8rem; width: 90%; padding: .4rem 0 .4rem 1rem}
+  .password-toggle {font-size: 1rem; right: 20px}
+
+  .auth-container {width: 60%;}
+  .auth-logo {height: 200px;}
+  .password-toggle {right: 25px}
+
+  .about-text-container {width: 95%; left: 2.5%; top: 24%;}
+  .about-box {padding: 1rem 2.5rem 3rem 1rem; font-size: .9em;}
+  .about-box > h2 {font-size: 1.3rem;}
+  .about-box > ol > li > p {font-size: 1rem;}
+  .about-box > ol > li {padding-bottom: .3rem;}
+  .about-box > ol {padding-left: .5rem;}
+  .about-esc-btn {font-size: .65rem; padding: .3rem .5rem; right: .7rem; top: .3rem;}
+  input.username, input.password, input.email {width: 90%; padding: .6rem 0 .6rem 1rem}
+}
+
+@media screen and (max-width:500px){
+  .notice-img {height: 120px}
+  .trail-name {font-size: 1rem;}
+  label {font-size: .85rem;}
+  .log-title {font-size: 1rem;}
+  .post-title {font-size: 1.5rem;}
+  .solo-title, .trail-logs-title {font-size: 1.3rem;}
+  p.bullet, .log-day, .log-mileage, .log-trail, .log-direction, .back-button, .log-day-solo, .log-mileage-solo, .log-trail-solo, .log-direction-solo, .log-description, a.footer-link  {font-size: .8rem;}
+  .log-start-end {font-size: .85rem;}
+  .log-edit, .log-delete {font-size: .6rem; padding: 6px 11px}
+}
+
+@media screen and (max-width:420px){
+  .post-container {margin-bottom: 3rem;}
+  .trail-container {padding: .8rem;}
+  label {font-size: .75rem;}
+  .log-title {font-size: .9rem;}
+  .solo-title, .trail-logs-title {font-size: 1rem;}
+  p.bullet, .log-day, .log-mileage, .log-trail, .log-direction, .log-day-solo, .log-mileage-solo, .log-trail-solo, .log-direction-solo, .log-description, a.footer-link  {font-size: .7rem;}
+  .log-start-end {font-size: .85rem;}
+  .log-edit, .log-delete {font-size: .5rem; padding: 4px 9px}
+
+  .auth-container {width: 80%;}
+  .auth-logo {height: 135px;}
+  .about-text-container {width: 95%; left: 2.5%; top: 16%;}
+
+}
+
+@media screen and (max-width:350px){
+  .logo {height: 50px;}
+  .nav-container {height: 70px;}
+  .nav-toggle {font-size: 1.3rem; left: .7rem;}
+  .navbar.open {left: .7rem; top: 3rem; padding: .5rem .8rem;}
+  .notice-img {height: 100px}
+  .trail-name {font-size: .8rem;}
+  .post-page {padding: 1rem .7rem}
+  .post-title {font-size: 1.2rem; padding-bottom: .5rem;}
+  .post-container {margin-bottom: 3rem;}
+  label, input, select {font-size: .6rem;}
+  .log-title {font-size: .8rem;}
+  .solo-title, .trail-logs-title {font-size: .8rem;}
+  p.bullet, .log-day, .log-mileage, .log-trail, .log-direction, .log-day-solo, .log-mileage-solo, .log-trail-solo, .log-direction-solo, .log-description  {font-size: .6rem;}
+  .log-start-end, a.footer-link {font-size: .6rem;}
+  .trail-form {width: 280px; margin: auto;}
+
+  .auth-container {width: 90%;}
+
+  .about-text-container {width: 95%; left: 2.5%; top: 15%;}
+  .about-box {padding: 1rem 2rem 3rem 1rem; font-size: .75rem;}
+  .about-box > h2 {font-size: 1.1rem;}
+  .about-box > ol > li > p {font-size: .8rem;}
+  .about-box > ol > li {padding-bottom: .3rem;}
+  .about-box > ol {padding-left: .5rem;}
+  .about-esc-btn {font-size: .65rem; padding: .3rem .5rem; right: .5rem; top: .3rem;}
+}
